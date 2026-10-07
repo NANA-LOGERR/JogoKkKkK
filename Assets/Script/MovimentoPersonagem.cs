@@ -110,6 +110,15 @@ public class MovimentoPersonagem : MonoBehaviour
         Controller.Move(movimento * Time.deltaTime);
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("coco"))
+        {
+            other.gameObject.SetActive(false); // Oculta o item coletado            count = count + 1;                  // Adiciona pontoSetCountText();
+        }
+    }
+
 
 
 }
+
